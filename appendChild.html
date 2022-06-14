@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Elementos do Appened</h1>
+<h2>The appendChild() Method</h2>
+
+<ul id="myList">
+  <li>Café</li>
+  <li>Chá</li>
+  <li>Ajax</li>
+  <li>Teste</li>
+</ul>
+          <form id="form">
+            <input type="text" id="nome" value="" placeholder="Ex: Digite Qualquere coisa">
+            <input type="button" id="button" value="Enviar">
+        </form>
+
+
+
+<h2>Cor</h2>
+
+<label><input type="radio" name="cores" value="red"
+    onclick="document.getElementById('myList').style.color='red'">Vermelho</label>
+<label><input type="radio" name="cores" value="blue"
+    onclick="document.getElementById('myList').style.color='blue'">Azul</label>
+<label><input type="radio" name="cores" value="green"
+    onclick="document.getElementById('myList').style.color='green'">Verde</label>
+
+    <script>
+           
+        function myFunction() {
+        var input = document.querySelector("#nome")
+        var nome = input.value
+        
+        const node = document.createElement("li");
+        
+        const textnode = document.createTextNode(nome);
+        
+        node.appendChild(textnode);
+        
+        document.getElementById("myList").appendChild(node);
+        
+        }
+
+        document.getElementById("button").addEventListener("click", myFunction)
+        </script>
+
+</body>
+</html>
